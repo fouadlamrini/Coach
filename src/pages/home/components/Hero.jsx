@@ -2,38 +2,64 @@ import React from 'react';
 
 export default function Hero() {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-      <div className="grid lg:grid-cols-12 gap-12 items-center">
-        {/* Left Content */}
-        <div className="lg:col-span-5 space-y-6">
-          <h1 className="text-4xl sm:text-5xl font-black text-[#0f2942] leading-tight">
-            Unlock Peak Performance & Defy Aging.
+    <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 overflow-hidden">
+      {/* Background Ambient Glows like the AnoMed screens */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute bottom-0 right-10 w-[300px] h-[300px] bg-emerald-500/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+      <div className="grid lg:grid-cols-12 gap-16 items-center relative z-10">
+        {/* Left Typography Column */}
+        <div className="lg:col-span-6 space-y-8 text-left">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-950/40 backdrop-blur-sm">
+            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+            <span className="text-[10px] tracking-widest font-bold uppercase text-cyan-400">Next-Gen Longevity System</span>
+          </div>
+          
+          <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-white leading-[1.1]">
+            Unlock Peak <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400">Performance</span> & Defy Aging.
           </h1>
-          <p className="text-lg text-slate-600 leading-relaxed">
-            The data-driven protocol for building sustainable muscle, optimizing cellular health, and mastering longevity.
+          
+          <p className="text-base sm:text-lg text-slate-400 leading-relaxed max-w-xl">
+            The data-driven protocol architected for building elite cellular adaptation, sustainable muscle tissue, and absolute baseline optimization.
           </p>
-          <div className="pt-2">
-            <a href="#" className="inline-block bg-[#0052cc] hover:bg-[#0041a3] text-white px-8 py-4 rounded-xl font-bold transition shadow-lg shadow-blue-500/20">
+          
+          <div className="pt-4 flex flex-col sm:flex-row gap-4">
+            <a href="#" className="shadow-[0_0_30px_rgba(6,182,212,0.3)] bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-600 hover:to-emerald-600 text-[#030712] px-8 py-4 rounded-xl font-bold tracking-wide uppercase text-xs text-center transition-all duration-300 transform hover:-translate-y-0.5">
               Start Your Transformation
+            </a>
+            <a href="#" className="border border-slate-800 hover:border-slate-700 bg-slate-900/40 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-bold tracking-wide uppercase text-xs text-center transition duration-300">
+              Explore The Science
             </a>
           </div>
         </div>
-        {/* Right Video (Wistia Style) */}
-        <div className="lg:col-span-7">
-          <div className="relative bg-slate-900 rounded-2xl overflow-hidden shadow-2xl aspect-video border-4 border-white group cursor-pointer">
-            <img 
-              src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1200" 
-              alt="Optimizing Your Human Protocol" 
-              className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition duration-500"
-            />
-            <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1.5 rounded-md font-medium">
-              Optimizing Your Human Protocol: Master Performance
-            </div>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-20 h-20 bg-[#ff0055] hover:bg-[#e6004c] text-white rounded-full flex items-center justify-center shadow-xl transition transform group-hover:scale-110">
-                <svg className="w-8 h-8 fill-current ml-1" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
+
+        {/* Right Premium Video Deck (Instead of standard player, it's embedded in cyber liquid layout) */}
+        <div className="lg:col-span-6">
+          <div className="relative p-1 rounded-2xl bg-gradient-to-b from-slate-800 via-slate-900 to-cyan-950/40 shadow-2xl">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 to-emerald-500 rounded-2xl opacity-20 blur-lg group-hover:opacity-40 transition duration-1000"></div>
+            <div className="relative bg-[#070a0f] rounded-xl overflow-hidden aspect-video border border-slate-800/80 group cursor-pointer">
+              
+              <img 
+                src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1200" 
+                alt="The Rayan Protocol Deck" 
+                className="w-full h-full object-cover opacity-40 mix-blend-luminosity hover:mix-blend-normal transition duration-700 scale-105"
+              />
+              
+              {/* Technical Overlay HUD */}
+              <div className="absolute top-4 left-4 right-4 flex justify-between items-center">
+                <div className="bg-black/60 backdrop-blur-md border border-slate-800 text-[10px] text-cyan-400 px-3 py-1.5 rounded-md font-mono tracking-wider uppercase">
+                  SYSTEM://OPTIMIZATION_DECK.mp4
+                </div>
+                <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></div>
+              </div>
+
+              {/* Futuristic Cyber Play Trigger */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-16 h-16 border border-cyan-400/40 bg-[#030712]/80 rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(6,182,212,0.4)] transition duration-300 transform group-hover:scale-110 group-hover:border-cyan-400">
+                  <svg className="w-5 h-5 text-cyan-400 fill-current ml-1" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
