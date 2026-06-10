@@ -41,17 +41,16 @@ export default function Pricing() {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {programs.map((prog, index) => (
-            <div 
-              key={index} 
-              className={`relative p-8 rounded-2xl flex flex-col justify-between transition duration-300 ${
-                prog.isFeatured 
-                  ? 'bg-slate-900/60 border-2 border-[#CDB26D]/60 shadow-[0_0_40px_rgba(205,178,109,0.12)]' 
-                  : 'bg-slate-950/40 border border-slate-800'
-              }`}
+            <div
+              key={index}
+              className={`relative p-8 rounded-2xl flex flex-col justify-between transition duration-300 ${prog.isFeatured
+                ? 'bg-slate-900/60 border-2 border-[#CDB26D]/60 shadow-[0_0_40px_rgba(205,178,109,0.12)]'
+                : 'bg-slate-950/40 border border-slate-800'
+                }`}
             >
               {prog.isFeatured && (
                 /* Fixed Badge from Cyan/Emerald to Gold Gradient */
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#F3DA90] via-[#CDB26D] to-[#967531] text-[#030712] font-mono text-[9px] font-black tracking-widest uppercase px-3 py-1 rounded-full shadow-md">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#967531] via-[#CDB26D] to-[#F3DA90] text-[#030712] font-mono text-[9px] font-black tracking-widest uppercase px-3 py-1 rounded-full shadow-lg shadow-[#967531]/20">
                   RECOMMENDED CONFIGURATION
                 </span>
               )}
@@ -66,7 +65,7 @@ export default function Pricing() {
                   {prog.features.map((feat, fIndex) => (
                     <li key={fIndex} className="flex items-start gap-3">
                       {/* Fixed Checkmark color from Cyan to Gold */}
-                      <span className="text-[#CDB26D] font-bold mt-0.5">✓</span> 
+                      <span className="text-[#CDB26D] font-bold mt-0.5">✓</span>
                       <span>{feat}</span>
                     </li>
                   ))}
@@ -74,12 +73,11 @@ export default function Pricing() {
               </div>
 
               {/* Action Buttons - Clean Premium Gradients & Borders */}
-              <button 
-                className={`w-full py-4 rounded-xl font-bold tracking-widest text-xs uppercase transition duration-300 mt-8 ${
-                  prog.isFeatured 
-                    ? 'bg-gradient-to-r from-[#F3DA90] via-[#CDB26D] to-[#967531] text-[#030712] shadow-lg shadow-[#CDB26D]/20 hover:shadow-[#F3DA90]/40 transform hover:-translate-y-0.5' 
-                    : 'bg-slate-900 border border-slate-800 text-white hover:bg-[#CDB26D]/5 hover:border-[#CDB26D]/40'
-                }`}
+              <button
+                className={`w-full py-4 rounded-xl font-bold tracking-widest text-xs uppercase transition duration-300 mt-8 ${prog.isFeatured
+                  ? 'bg-gradient-to-r from-[#967531] via-[#CDB26D] to-[#F3DA90] text-[#030712] shadow-lg shadow-[#CDB26D]/20 hover:shadow-[#F3DA90]/40 transform hover:-translate-y-0.5'
+                  : 'bg-slate-900 border border-slate-800 text-white hover:bg-[#CDB26D]/5 hover:border-[#CDB26D]/40'
+                  }`}
               >
                 Initialize Protocol
               </button>
