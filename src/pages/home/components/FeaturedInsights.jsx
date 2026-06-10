@@ -6,7 +6,8 @@ const insights = [
     desc: "A meticulous deep-dive into androgen baseline mechanics and system parameters.",
     tag: "ANDROGENS",
     stat: "94% Optimization Index",
-    img: "https://images.unsplash.com/photo-1579684389782-64d84b5e901a?q=80&w=600"
+    // Sora jdidda m-testya dyal lab research stable completely
+    img: "https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=600"
   },
   {
     title: "Reversing Insulin Resistance For Peak Cellular Yield",

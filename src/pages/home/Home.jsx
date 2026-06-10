@@ -10,7 +10,7 @@ import Footer from './components/Footer'
 
 const Home = () => {
   return (
-    <div className="bg-[#030712] text-white font-sans antialiased min-h-screen selection:bg-cyan-500 selection:text-black">
+    <div className="bg-[#030712] text-white font-sans antialiased min-h-screen selection:bg-[#CDB26D] selection:text-[#030712]">
       <Navbar />
       <Hero />
       <Bio />
